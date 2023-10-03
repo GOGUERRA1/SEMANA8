@@ -1,0 +1,103 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Top Games | Juegos de acción </title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+<link  href="{% static '/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+	
+	<section class="bg-dark dark">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark container">
+		  <div class="container-fluid">
+			<a class="navbar-brand" href="#">Top Games</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			  <div class="navbar-nav">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+					  <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+					</li>
+
+					<li class="nav-item">
+					  <a class="nav-link" aria-current="registro" href="{% url 'login' %}">Registro</a>
+					</li>
+
+					<li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Categorias
+					  </a>
+					  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li><a class="dropdown-item" href="{% url 'categoria_terror' %}">Terror</a></li>
+						<li><a class="dropdown-item" href="{% url 'categoria_accion' %}">Accion</a></li>
+						<li><a class="dropdown-item" href="{% url 'categoria_carreras' %}">Carreras</a></li>
+						<li><a class="dropdown-item" href="{% url 'categoria_deporte' %}">Deporte</a></li>
+						<li><a class="dropdown-item" href="{% url 'categoria_lucha' %}">Luchas</a></li>
+						<li><a class="dropdown-item" href="{% url 'categoria_shooter' %}">Shooter</a></li>
+					  </ul>
+					</li>
+			  </ul>
+			  </div>
+			</div>
+		  </div>
+		</nav>	
+	</section>
+
+    <section class="">
+	  <div class="container mt-5">
+		<h3>FORNITE</h3>
+		<span class="breadcrumb"><a href="{% url 'home' %}">Home </a>    &gt; <a href="{% url 'categoria_accion' %}">Juegos de accion</a> &gt;  {{nombre}}</span>	
+
+		</div>
+    </section>
+
+
+	
+	<section class="container ">
+		<div class="gaming-library">
+			<div class="item2">
+				<div class="left"><img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_Fortnite_image1600w.jpg" style="width: 600px"> </div>
+				
+				<div class="right pt-5">
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				
+			  </div>
+			 <div class="item2" >
+				   <p> Valor: 39.990</p>
+			 </div>
+			 <div class="item2" >
+				  <div class="main-button"><a href="#">COMPRAR</a></div>
+			  </div>
+			 </div> 
+	</section>
+	
+	<section class="categories container ">
+		<div class="main-button"><a href="{% url 'home' %}">VOLVER AL HOME</a></div>	
+	</section>	
+		
+		
+		
+		
+	<hr class="mt-5">		
+	<footer>
+		<div>
+			<p>Top games  2023</p>
+			
+		</div>
+	</footer>
+		
+		
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"> </script>
+	
+	</body>
+	</html>
+	

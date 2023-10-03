@@ -1,0 +1,62 @@
+
+	   
+{% extends 'core/base.html' %}
+{% load static %}
+	
+
+{% block content %}
+	<section class="highlight">
+  <div class="container pt-5 ">
+	<h6 class="">CATEGORIA</h6>
+	<h2 class="">JUEGOS DE TERROR</h2>
+		
+	<span class="breadcrumb"><a href="{% url 'home' %}">Home </a>   &gt;  Juegos de terror</span>		
+    </div> 
+	  
+</section>
+		
+<section>
+		<div class="container">
+		
+		
+		<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+		 <img src="https://cdn.vox-cdn.com/thumbor/YpXktExY0iESksakcZGGyHH08HQ=/0x0:1920x1080/2400x1356/filters:focal(952x336:953x337)/cdn.vox-cdn.com/uploads/chorus_asset/file/24385774/DS_LAUNCH_TRLRSCREEN_07.jpg" class="card-img-top" alt="..." >
+      <div class="card-body">
+        <h5 class="card-title">DEAD SPACE</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="{% url 'juego_show' id=1  %}" class="btn btn-primary">Ver detalles</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+		 <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2124490/capsule_616x353.jpg?t=1691545602" class="card-img-top" alt="..." >
+      <div class="card-body">
+        <h5 class="card-title">SILENT HILL 2</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="{% url 'home' %}" class="btn btn-primary">Ver detalles</a>
+      </div>
+    </div>
+  </div>
+</div>
+	
+	</div>
+	
+	</section>	
+	
+	
+
+	
+<section class="categories container mt-5">
+	<div class="main-button"><a href="{% url 'home' %}">VOLVER AL HOME</a></div>	
+</section>	
+	
+	
+	
+	
+{% endblock %}
+
+{% block js %}
+{% endblock %}

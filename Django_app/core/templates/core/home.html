@@ -1,0 +1,74 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block banner %}
+<div class="container mx-auto" id="banner">
+    <img src="https://gmedia.playstation.com/is/image/SIEPDC/diablo-iv-hero-banner-desktop-01%E2%80%93en-12dec22?$3200px$" class="img-fluid top-banner mx-auto" alt="...">
+</div>
+{% endblock %}	
+
+{% block content %}
+<section>
+	<div class="container py-5">
+        <h2>{{saludo}}</h2>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'images/resident.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Terror</h5>
+       <a href="{% url 'categoria_terror' %}" class="btn btn-primary">VER CATEGORIA</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'images/fornite.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Acción</h5>
+       <a href="{% url 'categoria_accion'  %}" class="btn btn-primary">VER CATEGORIA</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'images/shooter.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Shooter</h5>
+<a href="{% url 'categoria_shooter' %}" class="btn btn-primary">VER CATEGORIA</a>      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'images/ssff6.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Luchas</h5>
+<a href="{% url 'categoria_lucha' %}" class="btn btn-primary">VER CATEGORIA</a>      </div>
+    </div>
+  </div>
+		
+<div class="col">
+    <div class="card">
+      <img src="{% static 'images/deporte.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Deportes</h5>
+<a href="{% url 'categoria_deporte' %}" class="btn btn-primary">VER CATEGORIA</a>      </div>
+    </div>
+  </div>
+		
+		<div class="col">
+    <div class="card">
+      <img src="{% static 'images/forza.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Carreras</h5>
+<a href="{% url 'categoria_carreras' %}" class="btn btn-primary">VER CATEGORIA</a>      </div>
+    </div>
+  </div>
+</div>
+	
+	
+</div>	
+</section>	
+{% endblock %}

@@ -1,0 +1,100 @@
+
+   
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <div class="container py-5">
+        <h2>{{ juego_create }}</h2>
+
+
+
+        <form action="{% url 'juego_index' %}" id="formulario" method="POST" class="col-9 mx-auto rounded bg-light p-5">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col mb-3">
+                    <h3 class="fw-bolder h2">Regístrar juego</h3>
+                </div>
+            </div>
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" for="form6Example1" >Codigo</label>
+                  <input type="text" id="codigo" name="codigo" class="form-control"  required>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" for="form6Example1" >Nombre del juego</label>
+                  <input type="text" id="nombre" name="nombre" class="form-control"  required>
+                </div>
+              </div>
+
+              
+            </div>
+
+            <div class="col">
+              <div class="form-outline">
+                <label class="form-label" for="form6Example1">Categoria</label>
+                <select class="form-select" aria-label="Defeault select example" id="categoria"  name="categoria">
+                   {% for categoria in categorias %} 
+                  <option value="{{categoria.id}}">{{categoria.nombre}}</option>
+                   {% endfor %} 
+                </select>
+              </div>
+            </div>
+
+
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                    <label class="form-label" for="form6Example2">Descripción</label>
+                  <input type="text" id="descripcion" name="descripcion" class="form-control"  required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form6Example5">Correo</label>
+                        <input type="email" id="form6Example5" class="form-control" />
+                      </div>
+                </div>
+            </div>
+          
+
+            <!-- Email input -->
+            
+          
+            <!-- Number input -->
+          
+
+     
+          
+            <!-- Submit button -->
+            <div class="row  d-flex justify-content-end pb-5">
+                <div class="col-2">
+                    <button type="submit" class="btn btn-primary btn-block mb-4 btn-lg btn-block w-100">Enviar</button>
+                    
+                </div>
+                <div class="col-2 ">
+                    <button type="reset" class="btn btn-secondary btn-block mb-4 btn-lg btn-block w-100">Borrar</button>
+                </div>
+            </div>
+            
+
+          </form>
+    
+   
+    </div>
+
+</section>	
+{% endblock %}
+
+ 

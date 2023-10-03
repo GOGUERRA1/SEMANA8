@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container mx-auto" id="banner">
+    <img src="https://gmedia.playstation.com/is/image/SIEPDC/diablo-iv-hero-banner-desktop-01%E2%80%93en-12dec22?$3200px$" class="img-fluid top-banner mx-auto" alt="...">
+</div>
+
+<div class="col">
+    <div class="card">
+        <img src="{% static juego.image %}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">AA{{ Juego.nombre }}</h5>
+            <a href="#" class="btn btn-primary">VER CATEGORIA</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

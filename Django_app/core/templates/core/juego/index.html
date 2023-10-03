@@ -1,0 +1,39 @@
+
+   
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <div class="container py-5">
+        <h2>{{ juego_index }}</h2>
+        <h5>{{ juegos }}</h5>
+    
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">DESCRIPCION</th>
+            <th scope="col">CATEGORIA</th>
+          </tr>
+        </thead>
+       
+        {% for juego in juegos %}
+        <tbody>
+          <tr>
+            <th scope="row">{{ juego.id }}</th>
+            <td>{{ juego.nombre }}</td>
+            <td>{{ juego.descripcion }}</td>
+            <td>{{ juego.categoria.nombre}}</td>
+          </tr>
+        {% endfor  %}
+        </tbody>
+      </table>
+
+    </div>
+
+</section>	
+{% endblock %}
+
